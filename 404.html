@@ -20,9 +20,23 @@
     <!-- Custom styles for this template-->
     <link href="css/sb-admin-2.min.css" rel="stylesheet">
 
+    <script>
+    function doesFileExist() {
+        var xhr = new XMLHttpRequest();
+        xhr.open('HEAD', 'css/sb-admin-2.min.css', false);
+        xhr.send();
+         
+        if (xhr.status == "404") {
+            location.replace("https://d-v-x.github.io/404.html");
+        } else {
+            return true;
+        }
+    }
+    </script>
+
 </head>
 
-<body id="page-top">
+<body id="page-top" onload="doesFileExist()">
 
     <!-- Page Wrapper -->
     <div id="wrapper">
