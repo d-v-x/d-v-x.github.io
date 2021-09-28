@@ -21,17 +21,17 @@
     <link href="css/sb-admin-2.min.css" rel="stylesheet">
 
     <script>
-    function doesFileExist() {
-        var xhr = new XMLHttpRequest();
-        xhr.open('HEAD', 'css/sb-admin-2.min.css', false);
-        xhr.send();
-         
-        if (xhr.status == "404") {
-            location.replace("https://d-v-x.github.io/404.html");
-        } else {
-            return true;
+        function doesFileExist() {
+            var xhr = new XMLHttpRequest();
+            xhr.open('HEAD', 'css/sb-admin-2.min.css', false);
+            xhr.send();
+
+            if (xhr.status == "404") {
+                location.replace("https://d-v-x.github.io/404.html");
+            } else {
+                return true;
+            }
         }
-    }
     </script>
 
 </head>
@@ -41,27 +41,27 @@
     <!-- Page Wrapper -->
     <div id="wrapper">
 
-         <!-- Sidebar -->
-         <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
+        <!-- Sidebar -->
+        <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
 
             <!-- Sidebar - Brand -->
             <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
-               
+
                 <div class="sidebar-brand-text mx-3">Writeups</div>
             </a>
 
             <!-- Divider -->
             <hr class="sidebar-divider my-0">
-       
+
             <!-- Divider -->
-            <hr class="sidebar-divider">          
+            <hr class="sidebar-divider">
 
             <!-- Divider -->
             <hr class="sidebar-divider">
 
             <!-- Heading -->
             <div class="sidebar-heading">
-                Menu
+                Articles
             </div>
 
             <!-- Nav Item - Pages Collapse Menu -->
@@ -71,44 +71,92 @@
                     <i class="fas fa-fw fa-folder"></i>
                     <span>Cross Site Scripting</span>
                 </a>
-                <div id="collapseXSS" class="collapse" aria-labelledby="headingPages"
-                    data-parent="#accordionSidebar">
+                <div id="collapseXSS" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header">Stored</h6>
                         <a class="collapse-item" href="index.html">Article 001</a>
                         <a class="collapse-item" href="index.html">Article 002</a>
                         <a class="collapse-item" href="index.html">Article 003</a>
                         <h6 class="collapse-header">Reflected</h6>
-                        <a class="collapse-item" href="404.html">Article 004</a> 
-                        <a class="collapse-item" href="404.html">Article 005</a> 
-                        <a class="collapse-item" href="404.html">Article 006</a>                 
+                        <a class="collapse-item" href="404.html">Article 004</a>
+                        <a class="collapse-item" href="404.html">Article 005</a>
+                        <a class="collapse-item" href="404.html">Article 006</a>
                     </div>
-                </div>                
+                </div>
             </li>
 
             <li class="nav-item">
-              <a class="nav-link" href="#" data-toggle="collapse" data-target="#collapseSQLi" aria-expanded="true"
-                  aria-controls="collapseSQLi">
-                  <i class="fas fa-fw fa-folder"></i>
-                  <span>SQL Injection</span>
-              </a>
-              <div id="collapseSQLi" class="collapse" aria-labelledby="headingPages"
-                  data-parent="#accordionSidebar">
-                  <div class="bg-white py-2 collapse-inner rounded">
-                      <h6 class="collapse-header">First Order</h6>
-                      <a class="collapse-item" href="index.html">Article 001</a>
-                      <a class="collapse-item" href="index.html">Article 002</a>
-                      <a class="collapse-item" href="index.html">Article 003</a>
-                      <h6 class="collapse-header">Second Order</h6>
-                      <a class="collapse-item" href="404.html">Article 004</a> 
-                      <a class="collapse-item" href="404.html">Article 005</a> 
-                      <a class="collapse-item" href="404.html">Article 006</a>                 
-                  </div>
-              </div>
-              
-          </li>
+                <a class="nav-link" href="#" data-toggle="collapse" data-target="#collapseSQLi" aria-expanded="true"
+                    aria-controls="collapseSQLi">
+                    <i class="fas fa-fw fa-folder"></i>
+                    <span>SQL Injection</span>
+                </a>
+                <div id="collapseSQLi" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
+                    <div class="bg-white py-2 collapse-inner rounded">
+                        <h6 class="collapse-header">First Order</h6>
+                        <a class="collapse-item" href="index.html">Article 001</a>
+                        <a class="collapse-item" href="index.html">Article 002</a>
+                        <a class="collapse-item" href="index.html">Article 003</a>
+                        <h6 class="collapse-header">Second Order</h6>
+                        <a class="collapse-item" href="404.html">Article 004</a>
+                        <a class="collapse-item" href="404.html">Article 005</a>
+                        <a class="collapse-item" href="404.html">Article 006</a>
+                    </div>
+                </div>
 
-          
+            </li>
+
+            <!-- Divider -->
+            <hr class="sidebar-divider">
+
+            <!-- Heading -->
+            <div class="sidebar-heading">
+                NOTES
+            </div>
+
+            <!-- Nav Item - Pages Collapse Menu -->
+            <li class="nav-item">
+                <a class="nav-link" href="#" data-toggle="collapse" data-target="#collapseNote1" aria-expanded="true"
+                    aria-controls="collapseNote1">
+                    <i class="fas fa-fw fa-folder"></i>
+                    <span>Cross Site Scripting</span>
+                </a>
+                <div id="collapseNote1" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
+                    <div class="bg-white py-2 collapse-inner rounded">
+                        <h6 class="collapse-header">Stored</h6>
+                        <a class="collapse-item" href="index.html">Article 001</a>
+                        <a class="collapse-item" href="index.html">Article 002</a>
+                        <a class="collapse-item" href="index.html">Article 003</a>
+                        <h6 class="collapse-header">Reflected</h6>
+                        <a class="collapse-item" href="404.html">Article 004</a>
+                        <a class="collapse-item" href="404.html">Article 005</a>
+                        <a class="collapse-item" href="404.html">Article 006</a>
+                    </div>
+                </div>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link" href="#" data-toggle="collapse" data-target="#collapseNote2" aria-expanded="true"
+                    aria-controls="collapseNote2">
+                    <i class="fas fa-fw fa-folder"></i>
+                    <span>SQL Injection</span>
+                </a>
+                <div id="collapseNote2" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
+                    <div class="bg-white py-2 collapse-inner rounded">
+                        <h6 class="collapse-header">First Order</h6>
+                        <a class="collapse-item" href="index.html">Article 001</a>
+                        <a class="collapse-item" href="index.html">Article 002</a>
+                        <a class="collapse-item" href="index.html">Article 003</a>
+                        <h6 class="collapse-header">Second Order</h6>
+                        <a class="collapse-item" href="404.html">Article 004</a>
+                        <a class="collapse-item" href="404.html">Article 005</a>
+                        <a class="collapse-item" href="404.html">Article 006</a>
+                    </div>
+                </div>
+
+            </li>
+
+
             <!-- Divider -->
             <hr class="sidebar-divider d-none d-md-block">
 
@@ -125,7 +173,7 @@
 
             <br></br>
             <!-- Main Content -->
-            <div id="content">              
+            <div id="content">
 
                 <!-- Begin Page Content -->
                 <div class="container-fluid">
@@ -135,7 +183,7 @@
                         <div class="error mx-auto" data-text="404">404</div>
                         <p class="lead text-gray-800 mb-5">Page Not Found</p>
                         <p class="text-gray-500 mb-0">It looks like you found a glitch in the matrix...</p>
-                       
+
                     </div>
 
                 </div>
