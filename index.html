@@ -21,21 +21,39 @@
   <link href="css/sb-admin-2.min.css" rel="stylesheet">
 
   <script>
-    function doesFileExist() {
+    function load_write_ups(file) 
+    {
         var xhr = new XMLHttpRequest();
-        xhr.open('GET', '/write-up_001.txt', false);
+        document.get
+        xhr.open('GET', 'write-ups/write-up_'+file+'.txt?'+Math.random(), false);
         xhr.send();
 
         if (xhr.status == "404") {
-            location.replace("https://d-v-x.github.io/404.html");
+            location.replace("/404.html");
         } else {
             document.getElementById("content_body").innerHTML = xhr.response;
+            document.getElementById("content_title").innerHTML = "";
+        }
+    }
+
+    function load_note(file) 
+    {
+        var xhr = new XMLHttpRequest();
+        document.get
+        xhr.open('GET', 'notes/note_'+file+'.txt?'+Math.random(), false);
+        xhr.send();
+
+        if (xhr.status == "404") {
+            location.replace("/404.html");
+        } else {
+            document.getElementById("content_body").innerHTML = xhr.response;
+            document.getElementById("content_title").innerHTML = "";
         }
     }
 
     function onLoad()
     {
-      document.getElementById("content_title").innerHTML = "WRITE-UPS & NOTES"
+      document.getElementById("content_title").innerHTML = "<h1 class=\"h3 mb-4 text-gray-800\" style=\"margin-top: 25%;\"> <i><b>WRITE-UPS & NOTES</b></i> </h1>"
     }
 
 </script>
@@ -80,17 +98,19 @@
         <div id="collapseXSS" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
           <div class="bg-white py-2 collapse-inner rounded">
             <h6 class="collapse-header">Stored</h6>
-            <a class="collapse-item" href="template.html">Write-up 001</a>
-            <a class="collapse-item" href="template.html">Write-up 002</a>
-            <a class="collapse-item" href="template.html">Write-up 003</a>
+            <a class="collapse-item" href="#" onclick="load_write_ups('001')">Write-up 001</a>
+            <!-- <a class="collapse-item" href="#" onclick="load_write_ups('001')">Write-up 002</a>
+            <a class="collapse-item" href="#" onclick="load_write_ups('001')">Write-up 003</a> -->
             <h6 class="collapse-header">Reflected</h6>
-            <a class="collapse-item" href="template.html">Write-up 004</a>
-            <a class="collapse-item" href="template.html">Write-up 005</a>
-            <a class="collapse-item" href="template.html">Write-up 006</a>
+            <a class="collapse-item" href="#" onclick="load_write_ups('001')">Write-up 004</a>
+            <!-- <a class="collapse-item" href="#" onclick="load_write_ups('001')">Write-up 005</a>
+            <a class="collapse-item" href="#" onclick="load_write_ups('001')">Write-up 006</a> -->
           </div>
         </div>
       </li>
+<!--____________________________________________________Pending Idea_____________________________________________________________________-->
 
+<!--
       <li class="nav-item">
         <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseSQLi" aria-expanded="false"
           aria-controls="collapseSQLi">
@@ -100,20 +120,21 @@
         <div id="collapseSQLi" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
           <div class="bg-white py-2 collapse-inner rounded">
             <h6 class="collapse-header">First Order</h6>
-            <a class="collapse-item" href="template.html">Write-up 001</a>
-            <a class="collapse-item" href="template.html">Write-up 002</a>
-            <a class="collapse-item" href="template.html">Write-up 003</a>
-            <h6 class="collapse-header">Second Order</h6>
-            <a class="collapse-item" href="template.html">Write-up 004</a>
-            <a class="collapse-item" href="template.html">Write-up 005</a>
-            <a class="collapse-item" href="template.html">Write-up 006</a>
+            <a class="collapse-item" href="#" onclick="load_write_ups('001')">Write-up 001</a>
+            <a class="collapse-item" href="#" onclick="load_write_ups('001')">Write-up 002</a>
+            <a class="collapse-item" href="#" onclick="load_write_ups('001')">Write-up 003</a>
+            <h6 class="collapse-header">Reflected</h6>
+            <a class="collapse-item" href="#" onclick="load_write_ups('001')">Write-up 004</a>
+            <a class="collapse-item" href="#" onclick="load_write_ups('001')">Write-up 005</a>
+            <a class="collapse-item" href="#" onclick="load_write_ups('001')">Write-up 006</a>
           </div>
         </div>
 
       </li>
-
+-->
       <!-- Divider -->
-      <hr class="sidebar-divider">
+      <!-- <hr class="sidebar-divider"> -->
+<!--____________________________________________________End of Pending Idea_____________________________________________________________________-->
 
       <!-- Heading -->
       <div class="sidebar-heading">
@@ -130,17 +151,19 @@
         <div id="collapseNote1" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
           <div class="bg-white py-2 collapse-inner rounded">
             <h6 class="collapse-header">Stored</h6>
-            <a class="collapse-item" href="template.html">Note 001</a>
-            <a class="collapse-item" href="template.html">Note 002</a>
-            <a class="collapse-item" href="template.html">Note 003</a>
+            <a class="collapse-item" href="#" onclick="load_note('001')">Note 001</a>
+            <!-- <a class="collapse-item" href="#" onclick="load_note('001')">Note 002</a>
+            <a class="collapse-item" href="#" onclick="load_note('001')">Note 003</a> -->
             <h6 class="collapse-header">Reflected</h6>
-            <a class="collapse-item" href="template.html">Note 004</a>
-            <a class="collapse-item" href="template.html">Note 005</a>
-            <a class="collapse-item" href="template.html">Note 006</a>
+            <a class="collapse-item" href="#" onclick="load_note('001')">Note 004</a>
+            <!-- <a class="collapse-item" href="#" onclick="load_note('001')">Note 005</a>
+            <a class="collapse-item" href="#" onclick="load_note('001')">Note 006</a> -->
           </div>
         </div>
       </li>
 
+      <!--____________________________________________________Pending Idea_____________________________________________________________________-->
+<!--
       <li class="nav-item">
         <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseNote2" aria-expanded="false"
           aria-controls="collapseNote2">
@@ -150,21 +173,24 @@
         <div id="collapseNote2" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
           <div class="bg-white py-2 collapse-inner rounded">
             <h6 class="collapse-header">First Order</h6>
-            <a class="collapse-item" href="template.html">Note 001</a>
-            <a class="collapse-item" href="template.html">Note 002</a>
-            <a class="collapse-item" href="template.html">Note 003</a>
+            <a class="collapse-item" href="#" onclick="load_note('001')">Note 001</a>
+            <a class="collapse-item" href="#" onclick="load_note('001')">Note 002</a>
+            <a class="collapse-item" href="#" onclick="load_note('001')">Note 003</a>
             <h6 class="collapse-header">Second Order</h6>
-            <a class="collapse-item" href="template.html">Note 004</a>
-            <a class="collapse-item" href="template.html">Note 005</a>
-            <a class="collapse-item" href="template.html">Note 006</a>
+            <a class="collapse-item" href="#" onclick="load_note('001')">Note 004</a>
+            <a class="collapse-item" href="#" onclick="load_note('001')">Note 005</a>
+            <a class="collapse-item" href="#" onclick="load_note('001')">Note 006</a>
           </div>
         </div>
 
       </li>
 
-
+-->
       <!-- Divider -->
-      <hr class="sidebar-divider d-none d-md-block">
+      <!-- <hr class="sidebar-divider d-none d-md-block"> -->
+
+    
+<!--____________________________________________________End of Pending Idea_____________________________________________________________________-->
 
       <!-- Sidebar Toggler (Sidebar) -->
       <div class="text-center d-none d-md-inline">
@@ -185,7 +211,7 @@
         <!-- Content Title-->
         <div class="container-fluid">
           <br></br>
-          <h1 class="h3 mb-4 text-gray-800" style="margin-top: 25%;"> <i><b id="content_title"></b></i> </h1>
+          <p id="content_title"></p>
         </div>
 
         <!-- Content-->
