@@ -1,1 +1,11 @@
-The quick brown fox jumps over the lazy dog 
+<h2>Payload Obfuscation With Double Encoding</h2>
+
+<p style="text-align:justify">Conventional Cross Site Scripting (XSS) payload normally can be detected and sanitized by most Web Application Firewall (WAF). However, this can be easily bypassed 
+with various encoding scheme. For web application, one of the most widely use encoding scheme is url encoding or also knows as percent encoding. In my case, I able to bypass 
+the defence against XSS by using double url encoding.
+</p>
+
+<p style="text-align:justify">
+The program I tested enables the user to provide a link/url in their profile, which can be an oppoturnity for an attacker to include XSS payload in the particular field which may 
+lead to Stored XSS. However, when <code>javascript:prompt(document.cookie)</code> included within the field, the payload sanitized/changed to '#' character.
+</p>
