@@ -1,4 +1,4 @@
-<h2>Payload Obfuscation With Double Encoding</h2>
+<h2>Payload Obfuscation With Double Encoding</h2><i style="color:white">author: M. Arsyad, 29/9/2021</i>
 
 <p style="text-align:justify">Conventional Cross Site Scripting (XSS) payload normally can be detected and sanitized by most Web Application Firewall (WAF). However, this can be easily bypassed 
 with various encoding scheme. For web application, one of the most widely use encoding scheme is url encoding or also knows as percent encoding. In my case, I able to bypass 
@@ -7,5 +7,38 @@ the defence against XSS by using double url encoding.
 
 <p style="text-align:justify">
 The program I tested enables the user to provide a link/url in their profile, which can be an oppoturnity for an attacker to include XSS payload in the particular field which may 
-lead to Stored XSS. However, when <code>javascript:prompt(document.cookie)</code> included within the field, the payload sanitized/changed to '#' character.
+lead to Stored XSS. However, when <code>javascript:prompt(document.cookie)</code> included within the field, the payload sanitized/changed to '#' character. Then I tried to encode the
+colon (:) in the payload with single url encoding, which look like this : <code>javascript%3aprompt(document.cookie)</code>. But still the payload got transformed to '#'.
+</p>
+
+<p style="text-align:justify">
+Next, I have tried to mix the payload with lower case and upper case character, single encode all the characters but still it got sanitized. Here the list of payload that
+failed to trigger the pop up:
+</p>
+<code>javascript:prompt(document.cookie)</code><br>
+<code>javascript%3aprompt(document.cookie)</code><br>
+<code>javascripT%3aprompt(document.cookie)</code><br>
+<br>
+
+<p style="text-align:justify">
+After a few attempts, I just realized that whenever <i>javascript</i> and colon (:) entered within the field, it got sanitized. The I tried to encode one of the character
+with HTML Character Entities. So the next payload I used is <code>javascrip&amp;#x74;%3aprompt(document.cookie)</code>. The <code>&amp;#x74;</code> within the payload is the encoding for character
+'t'. Somehow it does not sanitized the payload and unfortunately, the payload rendered as invalid xss payload and it does not triggers the payload.
+<p>
+
+<p style="text-align:justify">
+Since this is my first bug to report, I am still lack of knowledge and the basic skill for bug hunting. So I did some digging and found a writing about double encoding. The book
+I refer to is <i>The Web Application Hacker's Handbook</i>, page 28. After did the reading, I crafted a payload as follows: <code>javascrip%2574%254aprompt(document.cookie)</code>,
+and it works.
+</p>
+
+<p style="text-align:justify">
+With all the failed payloads, I have learned a lot about encoding scheme in order to deliver the payload successfully. It may takes only one crafted payload to work, but some of the 
+failed payload might works on other program since different program adopt different architecture and technologies.
+</p>
+<br>
+
+<p style="text-align:justify; font-size: 80%">
+Bounty Received: $700 USD<br>
+Program: Undisclosed
 </p>
