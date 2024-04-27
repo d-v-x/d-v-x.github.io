@@ -9,10 +9,12 @@
     border-right-width: 1px;
     border-right-color: rgb(130, 255, 146,0.5);
     box-shadow: 0px 0px 15px 1px rgb(130, 255, 146,0.3);
-    transition: width 0.5s;
+    transition: width 0.5s, box-shadow 0.5s, border-right-width 0.2s;
 }
 .left-side-bar:hover{
     width: 200px;
+    box-shadow: 0px 0px 50px 1px rgb(130, 255, 146,0.3);
+    border-right-width: 3px;
 }
 body{
     background-color: rgb(30,30,30,1);
