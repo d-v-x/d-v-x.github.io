@@ -7,10 +7,9 @@
     background-color: rgb(25,25,25,1);
     border-right-style: solid;
     border-right-width: 1px;
-    border-right-color: rgb(50,50,50,1);
-    box-shadow: 0px 0px 20px 1px rgb(255,255,255,0.3);
+    border-right-color: rgb(130, 255, 146,0.5);
+    box-shadow: 0px 0px 15px 1px rgb(130, 255, 146,0.3);
     transition: width 0.5s;
-
 }
 .left-side-bar:hover{
     width: 200px;
