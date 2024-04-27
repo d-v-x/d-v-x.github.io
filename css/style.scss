@@ -24,17 +24,17 @@ body{
 
 .left-side-bar:hover .left-label{
     color:rgb(230,230,230,0.8);
-    transition: color 1s;
+    transition: color 2s;
 }
 
 .left-side-bar:not(:hover) .left-label{
     color:rgb(230,230,230,0);
+    font-size: 0;
     transition: color 0.3s;
 }
 
 .left-label{
     position:absolute;
-    opacity: 1;
     margin-left: 100px;
     margin-top:-8px;
     color:rgb(230,230,230,0.8);
@@ -55,7 +55,7 @@ body{
     left:-40;
     margin-top:-4px;
     white-space: nowrap;
-    transition: ease-in box-shadow 0.5s,  background-color 0.5s, width 0.5s;
+    transition: ease-in box-shadow 0.3s,  background-color 0.3s, width 0.3s;
 }
 
 .ico-house{
