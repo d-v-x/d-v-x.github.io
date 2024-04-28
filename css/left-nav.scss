@@ -22,22 +22,31 @@ body{
     border-right-width: 3px;
 }
 
-.left-side-bar:hover .left-label{
-    color:rgb(230,230,230,0.8);
-    transition: color 2s;
+.left-side-bar:hover .label-mask{
+    width: 200px;
 }
 
-.left-side-bar:not(:hover) .left-label{
-    color:rgb(230,230,230,0);
-    font-size: 0;
-    transition: color 0.3s;
+.left-side-bar:not(:hover) .label-mask{
+    width: 0px;
+
 }
 
 .left-label{
     position:absolute;
-    margin-left: 100px;
     margin-top:-8px;
     color:rgb(230,230,230,0.8);
+}
+
+.label-mask{
+    position: relative;
+    width:0px;
+    height:40px;
+    margin-left:100px;
+    overflow-x: scroll;
+    align-content: center;
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+    transition: width 0.3s;
 }
 
 .left-btn:hover{
