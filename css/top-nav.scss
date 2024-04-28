@@ -1,0 +1,32 @@
+.top-side-bar{
+    position: fixed;
+    width: 100%;
+    height: 55px;
+    border-bottom-style: solid;
+    border-bottom-color:rgb(130, 255, 146, 0.1);
+    border-bottom-width: 1px;
+}
+
+.breadcrumb{
+    position: absolute;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color:white;
+    font-size: 20px;
+    margin-left: 100px;
+    margin-top: 10px;
+}
+
+.selection {
+    position: absolute;
+    display: inline-block;
+    width: 150px;
+    height:25px;
+    border-style: solid;
+    border-width: 2px;
+    border-radius: 5px;
+    border-color:rgb(130, 255, 146, 0.1);
+    background-color: rgb(30, 30, 30, 1);
+    margin-left: 10px;
+}
+
+
