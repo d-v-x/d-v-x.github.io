@@ -112,13 +112,14 @@ body {
 }
 
 .ico-info {
-    position: relative;
+    position: absolute;
     background-image: url("/assets/info-square.svg");
     background-repeat: no-repeat;
     width: 40px;
     height: 40px;
     list-style-type: none;
-    margin: 650px 25px 25px 25px;
+    margin: 25px;
+    bottom:30px;
 }
 
 .ul-left {
