@@ -1,0 +1,107 @@
+body{
+    background-color: rgb(30,30,30,1);
+}
+
+.left-side-bar{
+    position: fixed;
+    width: 90px;
+    height: 100%;
+    left:0;
+    top:0;
+    background-color: rgb(25,25,25,1);
+    border-right-style: solid;
+    border-right-width: 1px;
+    border-right-color: rgb(130, 255, 146,0.5);
+    box-shadow: 0px 0px 15px 1px rgb(130, 255, 146,0.3);
+    transition: width 0.3s, box-shadow 0.3s, border-right-width 0.2s;
+}
+
+.left-side-bar:hover{
+    width: 270px;
+    box-shadow: 0px 0px 50px 1px rgb(130, 255, 146,0.3);
+    border-right-width: 3px;
+}
+
+.left-side-bar:hover .left-label{
+    color:rgb(230,230,230,0.8);
+    transition: color 2s;
+}
+
+.left-side-bar:not(:hover) .left-label{
+    color:rgb(230,230,230,0);
+    font-size: 0;
+    transition: color 0.3s;
+}
+
+.left-label{
+    position:absolute;
+    margin-left: 100px;
+    margin-top:-8px;
+    color:rgb(230,230,230,0.8);
+}
+
+.left-btn:hover{
+    box-shadow: 0px 0px 15px 1px rgb(130, 255, 146,0.3), 0px 0px 5px 4px inset rgb(130, 255, 146,0.3);
+    background-color:rgb(130, 255, 146,0.2) ;
+    width: 285px;
+}
+
+.left-btn{
+    position:absolute;
+    background-color:rgb(130, 255, 146,0) ;
+    border-style: none;
+    height: 50px;
+    width: 100px;
+    left:-40;
+    margin-top:-4px;
+    white-space: nowrap;
+    transition: ease-in box-shadow 0.3s,  background-color 0.3s, width 0.3s;
+}
+
+.ico-house{
+    position: relative;
+    background-image: url("/assets/house.svg");
+    background-repeat: no-repeat;
+    width:40px;
+    height:40px;
+    list-style-type: none;
+    margin: 25px;
+}
+
+.ico-bug{
+    position: relative;
+    background-image: url("/assets/bug.svg");
+    background-repeat: no-repeat;
+    width:40px;
+    height:40px;
+    list-style-type: none;
+    margin: 25px;
+}
+
+.ico-laptop{
+    position: relative;
+    background-image: url("/assets/laptop.svg");
+    background-repeat: no-repeat;
+    width:40px;
+    height:40px;
+    list-style-type: none;
+    margin: 25px;
+}
+
+.ico-camera{
+    position: relative;
+    background-image: url("/assets/camera.svg");
+    background-repeat: no-repeat;
+    width:40px;
+    height:40px;
+    list-style-type: none;
+    margin: 25px;
+}
+
+.ul-left {
+    margin: 0;
+    padding: 0;    
+}
+
+
+
