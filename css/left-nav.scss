@@ -33,7 +33,7 @@ body {
 
 .left-label {
     position: absolute;
-    margin-top: -8px;
+    -webkit-margin-before: -8px;
     color: rgb(230, 230, 230, 0.8);
 }
 
@@ -41,21 +41,18 @@ body {
     position: relative;
     width: 0px;
     height: 40px;
-    margin-top: 10px;
     margin-left: 100px;
     overflow-x: scroll;
     align-content: center;
     -ms-overflow-style: none; /* IE and Edge */
     scrollbar-width: none;    /* Firefox */
     transition: width 0.3s;
-    background-color: red;
 }
 
 /* Hide scrollbar for Chrome, Safari and Opera */
 .label-mask::-webkit-scrollbar {
     display: none;
 }
-
 
 .left-btn:hover {
     box-shadow: 0px 0px 15px 1px rgb(130, 255, 146, 0.3), 0px 0px 5px 4px inset rgb(130, 255, 146, 0.3);
