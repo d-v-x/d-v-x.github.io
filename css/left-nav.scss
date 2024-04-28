@@ -111,6 +111,16 @@ body {
     margin: 25px;
 }
 
+.ico-info {
+    position: relative;
+    background-image: url("/assets/info-square.svg");
+    background-repeat: no-repeat;
+    width: 40px;
+    height: 40px;
+    list-style-type: none;
+    margin: 650px 25px 25px 25px;
+}
+
 .ul-left {
     margin: 0;
     padding: 0;
