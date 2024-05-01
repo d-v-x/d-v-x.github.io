@@ -1,3 +1,7 @@
+:root{
+    --main-color:130, 255, 146;
+}
+
 .left-side-bar {
     position: fixed;
     width: 90px;
@@ -7,14 +11,14 @@
     background-color: rgb(25, 25, 25, 1);
     border-right-style: solid;
     border-right-width: 1px;
-    border-right-color: rgb(130, 255, 146, 0.5);
-    box-shadow: 0px 0px 15px 1px rgb(130, 255, 146, 0.3);
+    border-right-color: rgb(var(--main-color), 0.5);
+    box-shadow: 0px 0px 15px 1px rgb(var(--main-color), 0.3);
     transition: width 0.3s, box-shadow 0.3s, border-right-width 0.2s;
 }
 
 .left-side-bar:hover {
     width: 270px;
-    box-shadow: 0px 0px 50px 1px rgb(130, 255, 146, 0.3);
+    box-shadow: 0px 0px 50px 1px rgb(var(--main-color), 0.3);
     border-right-width: 3px;
 }
 
@@ -50,14 +54,14 @@
 }
 
 .left-btn:hover {
-    box-shadow: 0px 0px 15px 1px rgb(130, 255, 146, 0.3), 0px 0px 5px 4px inset rgb(130, 255, 146, 0.3);
-    background-color: rgb(130, 255, 146, 0.2);
+    box-shadow: 0px 0px 15px 1px rgb(var(--main-color), 0.3), 0px 0px 5px 4px inset rgb(var(--main-color), 0.3);
+    background-color: rgb(var(--main-color), 0.2);
     width: 285px;
 }
 
 .left-btn {
     position: absolute;
-    background-color: rgb(130, 255, 146, 0);
+    background-color: rgb(var(--main-color), 0);
     border-style: none;
     height: 50px;
     width: 100px;
