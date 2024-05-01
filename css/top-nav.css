@@ -20,6 +20,36 @@
     margin-top: 10px;
 }
 
+.selected{
+    position: fixed;
+    top:16px;
+    margin-left: 10px;
+    width: 200px;
+    height:30px;
+    display: inline-block;    
+    border-style: solid;
+    border-width: 2px;
+    border-radius: 5px;
+    border-color:rgb(var(--background), 0.1);
+    background-color: rgb(30, 30, 30, 1);
+    overflow-y: hidden;    
+    white-space: nowrap; 
+    overflow-y: scroll;
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; 
+    transition: ease-in-out height 0.3s;
+    z-index: 1;
+}
+
+.selected:hover{
+    border-color:rgb(var(--background), 0.5);
+
+}
+
+.selected::-webkit-scrollbar {
+    display: none;
+}
+
 .selection {
     position: absolute;
     top:-2px;
@@ -37,7 +67,7 @@
     transition: ease-in-out height 0.3s;
 }
 
-.selection:hover{
+.active, .selection:hover{
     height: 100px;
     overflow-y: scroll;
     -ms-overflow-style: none; /* IE and Edge */
