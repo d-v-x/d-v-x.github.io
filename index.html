@@ -5,33 +5,36 @@
     <link rel="stylesheet" type="text/css" href="/css/style.css">
     <link rel="stylesheet" type="text/css" href="/css/left-nav.css">
     <link rel="stylesheet" type="text/css" href="/css/top-nav.css">
-    <script src="/script/main.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 </head>
 
 <body>
+    <script src="/script/main.js"></script>
+
     <!--top nav-->
     <div class="top-side-bar">
         <span class="breadcrumb" id="breadcrumb"> Photography &#x25B8; <span>
-                <div class="selected" onmouseover="dropDownActive()" onmouseout="dropDownDeactive()"></div>
-                <div class="selection">
-                    <ul>
-                        <section>
-                            <li>topic for Photography 1</li>
-                        </section>
-                        <section>
-                            <li>topic for Photography 2</li>
-                        </section>
-                        <section>
-                            <li>topic for Photography 3</li>
-                        </section>
-                        <section>
-                            <li>topic for Photography 4</li>
-                        </section>
-                        <section>
-                            <li>topic for Photography 5</li>
-                        </section>
-                    </ul>
+                <div class="dd-container">
+                    <div class="selected" onmouseover="dropDownActive()" onmouseout="dropDownDeactive()"><p id="selected"></p></div>
+                    <div class="selection">
+                        <ul>
+                            <section>
+                                <li id="li1" onclick="selectedTopic('li1')">topic for Photography 1</li>
+                            </section>
+                            <section>
+                                <li id="li2" onclick="selectedTopic('li2')">topic for Photography 2</li>
+                            </section>
+                            <section>
+                                <li id="li3" onclick="selectedTopic('li3')">topic for Photography 3</li>
+                            </section>
+                            <section>
+                                <li id="li4" onclick="selectedTopic('li4')">topic for Photography 4</li>
+                            </section>
+                            <section>
+                                <li id="li5" onclick="selectedTopic('li5')">topic for Photography 5</li>
+                            </section>
+                        </ul>
+                    </div>
                 </div>
     </div>
     <!--left nav-->
