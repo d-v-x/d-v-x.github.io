@@ -15,7 +15,7 @@
     <div class="top-side-bar">
         <span class="breadcrumb" id="breadcrumb"> Photography</span><span class="arrow">&#x25B8;</span>
         <div class="dd-container" id="dd-container">
-            <div class="selected" onmouseover="dropDownActive()" onmouseout="dropDownDeactive()">
+            <div class="selected" onmouseover="dropDownActive(true)" onmouseout="dropDownActive(false)">
                 <p id="selected"></p>
             </div>
             <div class="selection">
@@ -38,7 +38,7 @@
             </li>
 
             <li class="ico-bug">
-                <button class="left-btn" onclick="setBreadcrumb('Application Security')">
+                <button class="left-btn" onclick="setBreadcrumb(10)">
                     <div class="label-mask">
                         <h3 class="left-label">Application Security</h3>
                     </div>
@@ -46,7 +46,7 @@
             </li>
 
             <li class="ico-laptop">
-                <button class="left-btn" onclick="setBreadcrumb('Web Development')">
+                <button class="left-btn" onclick="setBreadcrumb(20)">
                     <div class="label-mask">
                         <h3 class="left-label">Web Development</h3>
                     </div>
@@ -54,7 +54,7 @@
             </li>
 
             <li class="ico-camera">
-                <button class="left-btn" onclick="setBreadcrumb('Digital Art')">
+                <button class="left-btn" onclick="setBreadcrumb(30)">
                     <div class="label-mask">
                         <h3 class="left-label">Digital Art</h3>
                     </div>
