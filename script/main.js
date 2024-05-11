@@ -50,3 +50,10 @@ function getRequest(url) {
 
     return response_body;
 }
+
+function carouselActive(id){
+    document.getElementById(id).scrollIntoView({behavior: "smooth", inline: "center"});
+    $('.active-photo').removeClass('active-photo');
+    $('#' + id).addClass('active-photo');
+
+}
