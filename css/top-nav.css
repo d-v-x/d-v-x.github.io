@@ -1,26 +1,27 @@
-:root{
+:root {
     --background: 130, 255, 146;
 }
 
-.top-side-bar{
+.top-side-bar {
     position: fixed;
     width: 100%;
     height: 55px;
     border-bottom-style: solid;
-    border-bottom-color:rgb(var(--background), 0.1);
+    border-bottom-color: rgb(var(--background), 0.1);
     border-bottom-width: 1px;
 }
 
-.breadcrumb{
-    position: absolute;
+.breadcrumb {
+    position: relative;
+    display: inline-block;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    color:white;
+    color: white;
     font-size: 20px;
     margin-left: 100px;
     margin-top: 10px;
 }
 
-.selected{
+.selected {
     position: absolute;
     width: 200px;
     height: 30px;
@@ -39,8 +40,8 @@
     z-index: 1;
 }
 
-.selected:hover{
-    border-color:rgb(var(--background), 0.5);
+.selected:hover {
+    border-color: rgb(var(--background), 0.5);
 
 }
 
@@ -51,67 +52,76 @@
 .selection {
     position: absolute;
     width: 200px;
-    height:0px;
+    height: 0px;
     border-style: solid;
     border-width: 2px;
     border-radius: 5px;
-    border-color:rgb(var(--background), 0.1);
+    border-color: rgb(var(--background), 0.1);
     background-color: rgb(30, 30, 30, 1);
-    overflow-y: hidden;    
-    white-space: nowrap; 
+    overflow-y: hidden;
+    white-space: nowrap;
     transition: ease-in-out height 0.3s;
-    padding-top:30px;
 }
 
-.active, .selection:hover{
-    height: 100px;
+.active,
+.selection:hover {
+    padding-top: 30px;
+    height: 150px;
     overflow-y: scroll;
-    -ms-overflow-style: none; /* IE and Edge */
-    scrollbar-width: none; 
+    -ms-overflow-style: none;
+    /* IE and Edge */
+    scrollbar-width: none;
 }
 
 .dd-container {
-	left: 158px;
-	position: absolute;
-	top: -3px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: white;
+    font-size: 20px;
+    left: 0px;
+    position: relative;
+    display: inline-block;
+    top: -24px;
 }
 
 .selection::-webkit-scrollbar {
     display: none;
 }
 
-.selection ul{
-    position:relative;
+.selection ul {
+    position: relative;
     font-size: 15px;
     padding: 0;
-    margin-left:0px;
-    margin-top:2px;
+    margin-left: 0px;
+    margin-top: 2px;
 }
 
-.selected p{
-    position:relative;
+.selected p {
+    position: relative;
     font-size: 15px;
     padding: 0;
-    margin:5px;
+    margin: 5px;
 }
 
-.selection ul li{
+.selection ul li {
     margin-top: 5px;
-    margin-bottom:10px;
+    margin-bottom: 10px;
     padding-left: 10px;
     background-color: rgb(var(--background), 0.0);
     transition: background-color 0.5s;
 }
 
-.selection ul li:hover{
+.selection ul li:hover {
     border-style: none;
     margin-top: 5px;
     width: 200px;
     background-color: rgb(var(--background), 0.2);
 }
 
-
-
-
-
-
+.arrow {
+    color: white;
+    font-size: 20px;
+    display: inline-block;
+    position: relative;
+    margin-left: 10px;
+    margin-right: 10px;
+}

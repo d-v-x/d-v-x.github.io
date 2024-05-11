@@ -13,36 +13,24 @@
 
     <!--top nav-->
     <div class="top-side-bar">
-        <span class="breadcrumb" id="breadcrumb"> Photography &#x25B8; <span>
-                <div class="dd-container">
-                    <div class="selected" onmouseover="dropDownActive()" onmouseout="dropDownDeactive()"><p id="selected"></p></div>
-                    <div class="selection">
-                        <ul>
-                            <section>
-                                <li id="li1" onclick="selectedTopic('li1')">topic for Photography 1</li>
-                            </section>
-                            <section>
-                                <li id="li2" onclick="selectedTopic('li2')">topic for Photography 2</li>
-                            </section>
-                            <section>
-                                <li id="li3" onclick="selectedTopic('li3')">topic for Photography 3</li>
-                            </section>
-                            <section>
-                                <li id="li4" onclick="selectedTopic('li4')">topic for Photography 4</li>
-                            </section>
-                            <section>
-                                <li id="li5" onclick="selectedTopic('li5')">topic for Photography 5</li>
-                            </section>
-                        </ul>
-                    </div>
-                </div>
+        <span class="breadcrumb" id="breadcrumb"> Photography</span><span class="arrow">&#x25B8;</span>
+        <div class="dd-container" id="dd-container">
+            <div class="selected" onmouseover="dropDownActive()" onmouseout="dropDownDeactive()">
+                <p id="selected"></p>
+            </div>
+            <div class="selection">
+                <ul id="selectionItem">                   
+
+                </ul>
+            </div>
+        </div>
     </div>
     <!--left nav-->
     <div class="left-side-bar">
         <ul class="ul-left">
 
             <li class="ico-house">
-                <button class="left-btn">
+                <button class="left-btn" onclick="unsetBreadcrumb('Home')">
                     <div class="label-mask">
                         <h3 class="left-label">Home</h3>
                     </div>
@@ -50,7 +38,7 @@
             </li>
 
             <li class="ico-bug">
-                <button class="left-btn">
+                <button class="left-btn" onclick="setBreadcrumb('Application Security')">
                     <div class="label-mask">
                         <h3 class="left-label">Application Security</h3>
                     </div>
@@ -58,7 +46,7 @@
             </li>
 
             <li class="ico-laptop">
-                <button class="left-btn">
+                <button class="left-btn" onclick="setBreadcrumb('Web Development')">
                     <div class="label-mask">
                         <h3 class="left-label">Web Development</h3>
                     </div>
@@ -66,15 +54,15 @@
             </li>
 
             <li class="ico-camera">
-                <button class="left-btn">
+                <button class="left-btn" onclick="setBreadcrumb('Digital Art')">
                     <div class="label-mask">
-                        <h3 class="left-label">Photography</h3>
+                        <h3 class="left-label">Digital Art</h3>
                     </div>
                 </button>
             </li>
 
             <li class="ico-info">
-                <button class="left-btn">
+                <button class="left-btn" onclick="unsetBreadcrumb('About')">
                     <div class="label-mask">
                         <h3 class="left-label">About</h3>
                     </div>
