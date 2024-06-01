@@ -21,39 +21,14 @@
     margin-top: 10px;
 }
 
-.selected {
-    position: absolute;
-    width: 200px;
-    height: 30px;
-    display: inline-block;
-    border-style: solid;
-    border-width: 2px;
-    border-radius: 5px;
-    border-color: rgb(var(--background), 0.1);
-    background-color: rgb(30, 30, 30, 1);
-    white-space: nowrap;
-    overflow-y: scroll;
-    -ms-overflow-style: none;
-    scrollbar-width: none;
-    transition: ease-in-out height 0.3s;
-    z-index: 1;
-}
 
-.selected:hover {
-    border-color: rgb(var(--background), 0.5);
-
-}
-
-.selected::-webkit-scrollbar {
-    display: none;
-}
 
 .selection {
     position: absolute;
-    padding-top: 30px;
     width: 200px;
     height: 0px;
     border-style: solid;
+    top:100%;
     border-width: 2px;
     border-radius: 5px;
     border-color: rgb(var(--background), 0.1);
@@ -68,7 +43,6 @@
     height: 150px;
     overflow-y: scroll;
     -ms-overflow-style: none;
-    /* IE and Edge */
     scrollbar-width: none;
 }
 
@@ -79,7 +53,42 @@
     left: 0px;
     position: relative;
     display: inline-block;
-    top: -24px;
+    top: 7px;
+    height: 30px;
+
+    .selected {
+        position: relative;
+        width: 200px;
+        height: 100%;
+        display: inline-block;
+        border-style: solid;
+        border-width: 2px;
+        border-radius: 5px;
+        border-color: rgb(var(--background), 0.1);
+        background-color: rgb(30, 30, 30, 1);
+        white-space: nowrap;
+        overflow-y: scroll;
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+        transition: ease-in-out height 0.3s;
+        z-index: 1;
+    }
+    
+    .selected:hover {
+        border-color: rgb(var(--background), 0.5);
+    
+    }
+    
+    .selected::-webkit-scrollbar {
+        display: none;
+    }
+
+    .selected p {
+        position: relative;
+        font-size: 15px;
+        padding-left: 5px;
+        margin: 5px;
+    }
 }
 
 .selection::-webkit-scrollbar {
@@ -94,12 +103,7 @@
     margin-top: 2px;
 }
 
-.selected p {
-    position: relative;
-    font-size: 15px;
-    padding-left: 5px;
-    margin: 5px;
-}
+
 
 .selection ul li {
     margin-top: 5px;
