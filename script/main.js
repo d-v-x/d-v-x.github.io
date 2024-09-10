@@ -1,3 +1,6 @@
+//temp for bella
+window.location.href = "/bella/loan.html";
+
 $(document).ready(function () {
     $('#selected').html($('#li1').html());
     unsetBreadcrumb('Home');
