@@ -1,4 +1,23 @@
 [
     
-    
+ {
+     "No":"1",
+     "Date":"29/10/2024",
+     "Amount":"RM 2000",
+     "Remark":"Deposit"
+ },
+{
+     "No":"2",
+     "Date":"29/10/2024",
+     "Amount":"RM 100",
+     "Remark":"November"
+ },
+
+{
+     "No":"3",
+     "Date":"29/10/2024",
+     "Amount":"RM 100",
+     "Remark":"December"
+ }
+
 ]
