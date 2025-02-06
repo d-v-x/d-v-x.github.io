@@ -25,6 +25,14 @@
      "Date":"06/01/2025",
      "Amount":"RM 100",
      "Remark":"January"
+ },
+
+
+{
+     "No":"5",
+     "Date":"06/02/2025",
+     "Amount":"RM 100",
+     "Remark":"February"
  }
 
 ]
