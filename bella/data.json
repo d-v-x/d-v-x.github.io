@@ -51,6 +51,12 @@
      "Date":"08/05/2025",
      "Amount":"RM 150",
      "Remark":"May"
+ },
+{
+     "No":"9",
+     "Date":"03/06/2025",
+     "Amount":"RM 100",
+     "Remark":"June"
  }
 
 ]
